@@ -454,7 +454,7 @@ h6 span {
   position: absolute;
   top: 7.2rem;
   left: -100rem;
-  width: 23rem;
+  width: 28rem;
   height: 100vh;
   background-color: #fff;
   transition: 0.5s ease-in-out;
@@ -473,13 +473,18 @@ h6 span {
   transition: 0.5s ease-in-out;
 }
 .header__bottom__toggle.open span:first-child {
-  transform: translateY(2.1rem) rotate(180deg);
+  width: 50%;
+  transform: translate(-2px, 1.6rem) rotate(210deg);
+}
+.header__bottom__toggle.open span:nth-child(2) {
+  transform: rotate(180deg);
 }
 .header__bottom__toggle.open span:last-child {
-  transform: translateY(-2.1rem) rotate(-180deg);
+  width: 50%;
+  transform: translate(-2px, -1.6rem) rotate(150deg);
 }
 .header__bottom__nav ul li {
-  padding: 1rem;
+  padding: 1rem 2rem;
   transition: 0.5s ease-in-out;
 }
 .header__bottom__nav ul li a {
@@ -487,18 +492,14 @@ h6 span {
   justify-content: space-between;
   align-items: center;
 }
-.header__bottom__nav ul li:hover {
+.header__bottom__nav ul li:hover, .header__bottom__nav ul li.active {
   background-color: #01b3a7;
 }
-.header__bottom__nav ul li:hover a {
+.header__bottom__nav ul li:hover a, .header__bottom__nav ul li.active a {
   color: #fff;
 }
 .header__bottom__nav.open {
   left: 0;
-}
-.header__bottom__icons {
-  left: 0;
-  top: 10rem;
 }
 .header__bottom__icons ul {
   display: flex;
@@ -506,6 +507,9 @@ h6 span {
   padding: 2rem 0;
   border-bottom: 2px solid #f4f4f4;
   gap: 2rem;
+}
+.header__bottom__icons ul li a {
+  font-size: 1.8rem;
 }
 .header__bottom__icons ul li a:hover {
   color: #01b3a7;
@@ -567,14 +571,6 @@ h6 span {
   opacity: 1;
 }
 
-@keyframes swapA {
-  from {
-    transform: translateY(1rem);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 .btn {
   padding: 1.5rem 2rem;
   display: inline-block;
