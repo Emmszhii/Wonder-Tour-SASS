@@ -473,10 +473,15 @@ h6 span {
   transition: 0.5s ease-in-out;
 }
 .header__bottom__toggle.open span:first-child {
-  transform: translateY(2.1rem) rotate(180deg);
+  transform: translate(-1px, 1.5rem) rotateZ(180deg) rotate(30deg);
+  width: 40%;
+}
+.header__bottom__toggle.open span {
+  transform: rotateZ(180deg);
 }
 .header__bottom__toggle.open span:last-child {
-  transform: translateY(-2.1rem) rotate(-180deg);
+  transform: translate(-1px, -1.5rem) rotateZ(180deg) rotate(-30deg);
+  width: 40%;
 }
 .header__bottom__nav ul li {
   padding: 1rem;
