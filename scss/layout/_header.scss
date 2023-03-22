@@ -1,0 +1,125 @@
+.header {
+  background-color: $clr-light;
+  position: fixed;
+  width: 100%;
+  box-shadow: 1px 1px 10px $clr-dark;
+  z-index: 999;
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__bottom {
+    position: absolute;
+    top: 7rem;
+    left: -100rem;
+    width: 23rem;
+    background-color: $clr-light;
+    transition: 0.5s ease-in-out;
+    z-index: 99;
+    &__toggle {
+      cursor: pointer;
+      & span {
+        display: block;
+        width: 3rem;
+        height: 0.3rem;
+        margin: 0.8rem;
+        border-radius: 3rem;
+        background-color: $clr-dark;
+        transition: 0.5s ease-in-out;
+      }
+      &.open {
+        & span:first-child {
+          transform: translateY(2.1rem) rotate(180deg);
+        }
+        & span:last-child {
+          transform: translateY(-2.1rem) rotate(-180deg);
+        }
+      }
+    }
+    &__nav {
+      & ul {
+        li {
+          padding: 1rem;
+          & a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          &:hover {
+            background-color: $clr-primary;
+          }
+        }
+      }
+
+      &.open {
+        left: 0;
+      }
+    }
+    &__icons {
+      left: 0;
+      top: 10rem;
+      & ul {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0;
+        border-bottom: 2px solid $clr-gray;
+        gap: 2rem;
+      }
+    }
+    &.open {
+      left: 0;
+    }
+  }
+  &__contact {
+    position: absolute;
+    right: 0;
+    top: 9rem;
+    background-color: $clr-light;
+    padding: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    &__toggle {
+      span {
+        display: block;
+        width: 0.7rem;
+        height: 0.7rem;
+        margin: 0.2rem;
+        border-radius: 50%;
+        background-color: $clr-dark;
+        transition: 0.5s ease-in-out;
+      }
+      &.open span {
+        & {
+          transform: scale(0.8);
+        }
+        &:first-child {
+          transform: translateY(2rem) scale(0.8);
+        }
+        &:last-child {
+          transform: translateY(-2rem) scale(0.8);
+        }
+      }
+    }
+    &.open {
+      top: 7rem;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes swapA {
+  from {
+    transform: translateY(1rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
