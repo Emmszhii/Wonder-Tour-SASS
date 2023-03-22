@@ -438,8 +438,7 @@ h6 span {
   background-color: #fff;
   position: fixed;
   width: 100%;
-  box-shadow: 1px 1px 10px #000;
-  z-index: 999;
+  box-shadow: 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
 }
 .header__group {
   display: flex;
@@ -453,12 +452,13 @@ h6 span {
 }
 .header__bottom {
   position: absolute;
-  top: 7rem;
+  top: 7.2rem;
   left: -100rem;
   width: 23rem;
+  height: 100vh;
   background-color: #fff;
   transition: 0.5s ease-in-out;
-  z-index: 99;
+  box-shadow: 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
 }
 .header__bottom__toggle {
   cursor: pointer;
@@ -473,13 +473,19 @@ h6 span {
   transition: 0.5s ease-in-out;
 }
 .header__bottom__toggle.open span:first-child {
-  transform: translateY(2.1rem) rotate(180deg);
+  width: 50%;
+  transform: translate(-2px, 1.6rem) rotate(210deg);
+}
+.header__bottom__toggle.open span:nth-child(2) {
+  transform: rotate(180deg);
 }
 .header__bottom__toggle.open span:last-child {
-  transform: translateY(-2.1rem) rotate(-180deg);
+  width: 50%;
+  transform: translate(-2px, -1.6rem) rotate(150deg);
 }
 .header__bottom__nav ul li {
   padding: 1rem;
+  transition: 0.5s ease-in-out;
 }
 .header__bottom__nav ul li a {
   display: flex;
@@ -488,6 +494,9 @@ h6 span {
 }
 .header__bottom__nav ul li:hover {
   background-color: #01b3a7;
+}
+.header__bottom__nav ul li:hover a {
+  color: #fff;
 }
 .header__bottom__nav.open {
   left: 0;
@@ -503,6 +512,10 @@ h6 span {
   border-bottom: 2px solid #f4f4f4;
   gap: 2rem;
 }
+.header__bottom__icons ul li a:hover {
+  color: #01b3a7;
+  transition: 0.5s ease-in-out;
+}
 .header__bottom.open {
   left: 0;
 }
@@ -515,6 +528,25 @@ h6 span {
   visibility: hidden;
   opacity: 0;
   transition: 0.5s ease-in-out;
+  box-shadow: inset 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
+}
+.header__contact__item p {
+  display: flex;
+  gap: 2rem;
+}
+.header__contact__item p span small {
+  font-size: 1.4rem;
+}
+.header__contact__item p i {
+  font-size: 1.8rem;
+  color: #01b3a7;
+}
+.header__contact a {
+  width: 100%;
+  text-align: center;
+}
+.header__contact__toggle {
+  cursor: pointer;
 }
 .header__contact__toggle span {
   display: block;
@@ -535,7 +567,7 @@ h6 span {
   transform: translateY(-2rem) scale(0.8);
 }
 .header__contact.open {
-  top: 7rem;
+  top: 7.2rem;
   visibility: visible;
   opacity: 1;
 }
