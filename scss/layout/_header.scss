@@ -169,6 +169,9 @@
             margin: 0 2rem;
             padding: 1rem 0;
             border-bottom: 1px solid $clr-gray;
+            color: $clr-primary;
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
           }
           li {
             padding: 1rem 4rem;
@@ -365,7 +368,7 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        top: 6.6rem;
+        top: 6.7rem;
         left: 10.3rem;
         li {
           margin: 0 !important;
@@ -402,6 +405,52 @@
     .blog {
       &__nav:hover ul {
         left: 45.05rem;
+      }
+    }
+    .pages {
+      &__nav {
+        &__content {
+          & div:first-child {
+            left: 0;
+          }
+          & div:last-child {
+            left: 20rem;
+          }
+        }
+      }
+
+      &__nav:hover ul {
+        position: absolute;
+        background-color: $clr-light;
+        height: fit-content;
+        max-height: 100rem;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        top: 6.7rem;
+        left: 10.3rem;
+
+        li {
+          margin: 0 !important;
+          border-top: unset !important;
+          padding: unset !important;
+          display: flex;
+          align-items: center;
+          &:hover {
+            background-color: unset;
+            border-left: unset;
+            border-left: 4px solid $clr-primary;
+            transition: 0.5s ease-in-out;
+            a {
+              padding-left: 2rem !important;
+              transition: 0.5s ease-in-out;
+            }
+          }
+          a {
+            color: black;
+          }
+        }
       }
     }
   }

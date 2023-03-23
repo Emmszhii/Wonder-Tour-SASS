@@ -611,6 +611,9 @@ h6 span {
   margin: 0 2rem;
   padding: 1rem 0;
   border-bottom: 1px solid #f4f4f4;
+  color: #01b3a7;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
 }
 .header__bottom__nav ul.item li {
   padding: 1rem 4rem;
@@ -798,7 +801,7 @@ h6 span {
     display: flex;
     flex-direction: column;
     align-items: start;
-    top: 6.6rem;
+    top: 6.7rem;
     left: 10.3rem;
   }
   .header .about__nav:hover ul li,
@@ -841,6 +844,45 @@ h6 span {
   }
   .header .blog__nav:hover ul {
     left: 45.05rem;
+  }
+  .header .pages__nav__content div:first-child {
+    left: 0;
+  }
+  .header .pages__nav__content div:last-child {
+    left: 20rem;
+  }
+  .header .pages__nav:hover ul {
+    position: absolute;
+    background-color: #fff;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 100rem;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 6.7rem;
+    left: 10.3rem;
+  }
+  .header .pages__nav:hover ul li {
+    margin: 0 !important;
+    border-top: unset !important;
+    padding: unset !important;
+    display: flex;
+    align-items: center;
+  }
+  .header .pages__nav:hover ul li:hover {
+    background-color: unset;
+    border-left: unset;
+    border-left: 4px solid #01b3a7;
+    transition: 0.5s ease-in-out;
+  }
+  .header .pages__nav:hover ul li:hover a {
+    padding-left: 2rem !important;
+    transition: 0.5s ease-in-out;
+  }
+  .header .pages__nav:hover ul li a {
+    color: black;
   }
 }
 
