@@ -2,21 +2,26 @@ const headerBottomToggle = document.querySelector(".header__bottom__toggle");
 const headerBottomNav = document.querySelector(".header__bottom");
 const headerContactToggle = document.querySelector(".header__contact__toggle");
 const headerContactContent = document.querySelector(".header__contact");
-const headerNavToggleIcon = document.querySelectorAll(".header__toggle__item");
+const headerNavToggleIcon = document.querySelectorAll(
+  ".header__toggle__item span"
+);
 
 const onClickHeaderBottom = () => {
   headerBottomToggle.classList.toggle("open");
   headerBottomNav.classList.toggle("open");
   headerContactToggle.classList.remove("open");
   headerContactContent.classList.remove("open");
-
   closeAllHeaderItem();
 };
 
 const closeAllHeaderItem = () => {
   headerNavToggleIcon.forEach((item) => {
-    item.nextElementSibling.classList.remove("open");
-    item.classList.remove("active");
+    const activeItem = item.parentElement;
+    const icon = item.querySelector("span i");
+    const content = item.nextElementSibling;
+    activeItem.classList.remove("active");
+    icon.classList.remove("active");
+    content.classList.remove("open");
   });
 };
 
@@ -29,10 +34,11 @@ const onClickContactToggle = () => {
 };
 
 const onClickVisibleToggle = (e) => {
-  const element = e.currentTarget;
+  const element = e.currentTarget.parentElement;
   element.classList.toggle("active");
-  element.querySelector("span i").classList.toggle("active");
-  element.nextElementSibling.classList.toggle("open");
+  element.querySelector("i").classList.toggle("active");
+  const content = element.querySelector(".content");
+  content.classList.toggle("open");
 };
 
 if (headerBottomToggle)
