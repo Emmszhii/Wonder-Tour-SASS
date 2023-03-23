@@ -583,6 +583,12 @@ h6 span {
 .header__bottom__nav ul li span i.active {
   color: #fff;
 }
+.header__bottom__nav ul li.active {
+  background-color: #01b3a7;
+}
+.header__bottom__nav ul li.active a {
+  color: #fff;
+}
 @media screen and (min-width: 1200px) {
   .header__bottom__nav ul li.active {
     background-color: #1c3b57;
@@ -755,6 +761,7 @@ h6 span {
 @media screen and (min-width: 1200px) {
   .header__toggle__item .content {
     visibility: hidden;
+    width: 40rem;
     display: none;
   }
 }
@@ -766,31 +773,78 @@ h6 span {
   font-size: 2rem;
   letter-spacing: 0.3rem;
 }
+@media screen and (min-width: 1200px) {
+  .header__toggle__item .content ul {
+    background-color: #fff;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem 0;
+    width: 100%;
+  }
+}
 .header__toggle__item .content ul li {
   padding: 1rem 4rem;
+  width: 100%;
   cursor: pointer;
 }
 .header__toggle__item .content ul li a {
   color: #000;
 }
+.header__toggle__item .content ul li:hover {
+  background-color: #01b3a7;
+}
 .header__toggle__item .content ul li:hover a {
   color: #fff;
 }
-.header__toggle__item:hover .content {
-  display: block;
-  visibility: visible;
-  position: absolute;
-  max-height: 100rem;
-  background-color: #fff;
+@media screen and (min-width: 1200px) {
+  .header__toggle__item .content ul li {
+    padding: unset;
+    margin: 1rem 2rem;
+  }
+  .header__toggle__item .content ul li:hover {
+    background-color: unset;
+  }
+  .header__toggle__item .content ul li:hover a {
+    color: unset;
+    transition: 0.5s ease-in-out;
+    border-left: 4px solid #01b3a7;
+    padding-left: 2rem;
+  }
 }
-.header__toggle__item:hover .content ul li a {
-  border-top: unset;
+@media screen and (min-width: 1200px) {
+  .header__toggle__item:hover .content {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    max-height: 100rem;
+    max-width: 40rem;
+    background-color: #fff;
+  }
+  .header__toggle__item:hover .content ul {
+    width: 100%;
+  }
+  .header__toggle__item:hover .content ul li a {
+    border-top: unset;
+  }
+}
+.header__toggle__item.active {
+  transition: 0.5s ease-in-out;
+}
+.header__toggle__item.active span {
+  background-color: #01b3a7;
+}
+.header__toggle__item.active span a {
+  color: #fff;
 }
 .header__toggle__item span i {
   transition: 0.5s ease-in-out;
 }
 .header__toggle__item span i.active {
   transform: rotate(180deg);
+}
+
+body {
+  background-color: red;
 }
 
 .btn {

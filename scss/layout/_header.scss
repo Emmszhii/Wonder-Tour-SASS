@@ -141,6 +141,10 @@
             }
           }
           &.active {
+            background-color: $clr-primary;
+            a {
+              color: $clr-light;
+            }
             @include mediaQueryMin($desktop) {
               background-color: lighten($clr-dark-secondary, 5);
               a {
@@ -148,8 +152,8 @@
               }
             }
           }
-          &:hover {
-            @include mediaQueryMin($desktop) {
+          @include mediaQueryMin($desktop) {
+            &:hover {
               background-color: lighten($clr-dark-secondary, 5);
               a {
                 border-top: 4px solid $clr-primary;
@@ -316,6 +320,7 @@
         }
         @include mediaQueryMin($desktop) {
           visibility: hidden;
+          width: 40rem;
           display: none;
         }
         h4 {
@@ -327,36 +332,75 @@
           letter-spacing: 0.3rem;
         }
         ul {
+          @include mediaQueryMin($desktop) {
+            background-color: $clr-light;
+            flex-direction: column;
+            align-items: start;
+            padding: 1rem 0;
+            width: 100%;
+          }
           li {
             padding: 1rem 4rem;
+            width: 100%;
             cursor: pointer;
             a {
               color: $clr-dark;
             }
-            &:hover a {
-              color: $clr-light;
-            }
-          }
-        }
-      }
-      &:hover {
-        & .content {
-          display: block;
-          visibility: visible;
-          position: absolute;
-          max-height: 100rem;
-          background-color: $clr-light;
-          ul {
-            li {
+            &:hover {
+              background-color: $clr-primary;
               a {
-                border-top: unset;
+                color: $clr-light;
+              }
+            }
+            @include mediaQueryMin($desktop) {
+              padding: unset;
+
+              margin: 1rem 2rem;
+
+              &:hover {
+                background-color: unset;
+                a {
+                  color: unset;
+                  transition: 0.5s ease-in-out;
+                  border-left: 4px solid $clr-primary;
+                  padding-left: 2rem;
+                }
               }
             }
           }
         }
       }
+      @include mediaQueryMin($desktop) {
+        &:hover {
+          & .content {
+            display: block;
+            visibility: visible;
+            position: absolute;
+            max-height: 100rem;
+            max-width: 40rem;
+            background-color: $clr-light;
+            ul {
+              width: 100%;
+              li {
+                a {
+                  border-top: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.active {
+        transition: 0.5s ease-in-out;
+        & span {
+          background-color: $clr-primary;
+          & a {
+            color: $clr-light;
+          }
+        }
+      }
       span {
-        i {
+        & i {
           transition: 0.5s ease-in-out;
           &.active {
             transform: rotate(180deg);
@@ -365,113 +409,8 @@
       }
     }
   }
-  // @include mediaQueryMin($desktop) {
-  //   .about,
-  //   .tour,
-  //   .gallery,
-  //   .blog {
-  //     &__nav {
-  //       ul {
-  //         padding: 2rem;
-  //         width: 30rem;
-  //         li {
-  //           width: 100%;
-  //         }
-  //       }
-  //     }
-  //     &__nav:hover ul {
-  //       position: absolute;
-  //       background-color: $clr-light;
-  //       height: fit-content;
-  //       max-height: 100rem;
-  //       visibility: visible;
-  //       display: flex;
-  //       flex-direction: column;
-  //       align-items: start;
-  //       top: 6.7rem;
-  //       left: 10.3rem;
-  //       li {
-  //         margin: 0 !important;
-  //         border-top: unset !important;
-  //         padding: unset !important;
-  //         display: flex;
-  //         align-items: center;
-  //         &:hover {
-  //           background-color: unset;
-  //           border-left: unset;
-  //           border-left: 4px solid $clr-primary;
-  //           transition: 0.5s ease-in-out;
-  //           a {
-  //             padding-left: 2rem !important;
-  //             transition: 0.5s ease-in-out;
-  //           }
-  //         }
-  //         a {
-  //           color: black;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .tour {
-  //     &__nav:hover ul {
-  //       left: 20.8rem;
-  //     }
-  //   }
-  //   .gallery {
-  //     &__nav:hover ul {
-  //       left: 33.8rem;
-  //     }
-  //   }
-  //   .blog {
-  //     &__nav:hover ul {
-  //       left: 45.05rem;
-  //     }
-  //   }
-  //   .pages {
-  //     &__nav {
-  //       &__content {
-  //         & div:first-child {
-  //           left: 0;
-  //         }
-  //         & div:last-child {
-  //           left: 20rem;
-  //         }
-  //       }
-  //     }
+}
 
-  // &__nav:hover ul {
-  //   position: absolute;
-  //   background-color: $clr-light;
-  //   height: fit-content;
-  //   max-height: 100rem;
-  //   visibility: visible;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: start;
-  //   top: 6.7rem;
-  //   left: 10.3rem;
-
-  //   li {
-  //     margin: 0 !important;
-  //     border-top: unset !important;
-  //     padding: unset !important;
-  //     display: flex;
-  //     align-items: center;
-  //     &:hover {
-  //       background-color: unset;
-  //       border-left: unset;
-  //       border-left: 4px solid $clr-primary;
-  //       transition: 0.5s ease-in-out;
-  //       a {
-  //         padding-left: 2rem !important;
-  //         transition: 0.5s ease-in-out;
-  //       }
-  //     }
-  //     a {
-  //       color: black;
-  //     }
-  //   }
-  // }
-  // }
-  // }
+body {
+  background-color: red;
 }
