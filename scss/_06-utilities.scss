@@ -44,14 +44,14 @@ $alignments: left, right, center;
 }
 
 // @for $i from 1 through 5 {
-  // .gap--#{$i} > * {
-  //   padding: #{$i}rem;
-  // }
+// .gap--#{$i} > * {
+//   padding: #{$i}rem;
+// }
 
-  // .gap--#{$i} > {
-  //   margin-right: -#{$i}rem;
-  //   margin-left: -#{$i}rem;
-  // }
+// .gap--#{$i} > {
+//   margin-right: -#{$i}rem;
+//   margin-left: -#{$i}rem;
+// }
 // }
 
 $justify: (
