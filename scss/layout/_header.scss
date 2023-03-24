@@ -323,6 +323,11 @@
           width: 40rem;
           display: none;
         }
+        &__item {
+          &:last-child {
+            display: none;
+          }
+        }
         h4 {
           margin: 0 2rem;
           padding: 1rem 0;
@@ -330,6 +335,14 @@
           color: $clr-primary;
           font-size: 2rem;
           letter-spacing: 0.3rem;
+          @include mediaQueryMin($desktop) {
+            border-bottom: unset;
+            color: $clr-dark;
+            font-weight: normal;
+            font-size: 2.5rem;
+            padding: 0 0 1rem 0;
+            margin: unset;
+          }
         }
         ul {
           @include mediaQueryMin($desktop) {
@@ -376,7 +389,7 @@
             display: block;
             visibility: visible;
             position: absolute;
-            max-height: 100rem;
+            max-height: 150rem;
             max-width: 40rem;
             background-color: $clr-light;
             ul {
@@ -385,6 +398,46 @@
                 a {
                   border-top: unset;
                 }
+              }
+            }
+          }
+          &:last-child {
+            & .content {
+              position: absolute;
+              left: -68.3rem;
+              max-width: 150rem;
+              width: 117.1rem;
+              height: fit-content;
+              padding: 4rem 0;
+              & ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 35rem;
+                padding: 0;
+                gap: 0;
+                li {
+                  padding: 0.5rem 0;
+                  margin: 0;
+                  a {
+                    font-size: 1.4rem;
+                  }
+                }
+              }
+            }
+          }
+          & .content {
+            &__wrapper {
+              display: flex;
+              border-right: 3px solid $clr-gray;
+            }
+            &__item {
+              padding: 2rem;
+              height: 100%;
+              &:not(:last-child) {
+                border-right: 2px solid $clr-gray;
+              }
+              &:last-child {
+                display: block;
               }
             }
           }

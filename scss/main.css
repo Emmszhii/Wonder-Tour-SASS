@@ -437,7 +437,7 @@ h6 span {
   width: 100%;
   box-shadow: 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header {
     box-shadow: unset;
   }
@@ -465,7 +465,7 @@ h6 span {
   transition: 0.5s ease-in-out;
   box-shadow: inset 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom {
     display: flex;
     justify-content: space-between;
@@ -503,7 +503,7 @@ h6 span {
 .header__bottom__toggle {
   cursor: pointer;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__toggle {
     display: none;
   }
@@ -532,13 +532,13 @@ h6 span {
   height: calc(100vh - 13.5rem);
   overflow-y: auto;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__nav {
     height: unset;
     overflow-y: unset;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__nav ul {
     display: flex;
     align-items: center;
@@ -550,7 +550,7 @@ h6 span {
   margin: 0.5rem 0;
   transition: 0.5s ease-in-out;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__nav ul li {
     margin: unset;
     height: 100%;
@@ -571,7 +571,7 @@ h6 span {
   padding: 1rem 2rem;
   cursor: pointer;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__nav ul li span {
     padding: unset;
   }
@@ -589,7 +589,7 @@ h6 span {
 .header__bottom__nav ul li.active a {
   color: #fff;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__nav ul li.active {
     background-color: #1c3b57;
   }
@@ -597,7 +597,7 @@ h6 span {
     border-top: 4px solid #01b3a7;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__nav ul li:hover {
     background-color: #1c3b57;
   }
@@ -615,7 +615,7 @@ h6 span {
   border-bottom: 2px solid #f4f4f4;
   gap: 2rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__bottom__icons ul {
     border-bottom: unset;
     height: 100%;
@@ -646,7 +646,7 @@ h6 span {
   transition: 0.5s ease-in-out;
   box-shadow: inset 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__contact {
     position: unset;
     visibility: visible;
@@ -656,7 +656,7 @@ h6 span {
     padding: 2rem 0;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__contact__item {
     display: flex;
     align-items: center;
@@ -675,7 +675,7 @@ h6 span {
     transform: translateX(1.8rem);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__contact__item ul {
     display: flex;
     justify-content: space-evenly;
@@ -690,7 +690,7 @@ h6 span {
   gap: 1rem;
   padding: 1rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__contact__item ul li {
     padding: 0 1rem;
   }
@@ -718,7 +718,7 @@ h6 span {
 .header__contact__toggle {
   cursor: pointer;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__contact__toggle {
     display: none;
   }
@@ -758,12 +758,15 @@ h6 span {
 .header__toggle__item .content.open {
   max-height: 100rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__toggle__item .content {
     visibility: hidden;
     width: 40rem;
     display: none;
   }
+}
+.header__toggle__item .content__item:last-child {
+  display: none;
 }
 .header__toggle__item .content h4 {
   margin: 0 2rem;
@@ -773,7 +776,17 @@ h6 span {
   font-size: 2rem;
   letter-spacing: 0.3rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
+  .header__toggle__item .content h4 {
+    border-bottom: unset;
+    color: #000;
+    font-weight: normal;
+    font-size: 2.5rem;
+    padding: 0 0 1rem 0;
+    margin: unset;
+  }
+}
+@media screen and (min-width: 120rem) {
   .header__toggle__item .content ul {
     background-color: #fff;
     flex-direction: column;
@@ -796,7 +809,7 @@ h6 span {
 .header__toggle__item .content ul li:hover a {
   color: #fff;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__toggle__item .content ul li {
     padding: unset;
     margin: 1rem 2rem;
@@ -811,12 +824,12 @@ h6 span {
     padding-left: 2rem;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 120rem) {
   .header__toggle__item:hover .content {
     display: block;
     visibility: visible;
     position: absolute;
-    max-height: 100rem;
+    max-height: 150rem;
     max-width: 40rem;
     background-color: #fff;
   }
@@ -825,6 +838,43 @@ h6 span {
   }
   .header__toggle__item:hover .content ul li a {
     border-top: unset;
+  }
+  .header__toggle__item:hover:last-child .content {
+    position: absolute;
+    left: -68.3rem;
+    max-width: 150rem;
+    width: 117.1rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4rem 0;
+  }
+  .header__toggle__item:hover:last-child .content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 35rem;
+    padding: 0;
+    gap: 0;
+  }
+  .header__toggle__item:hover:last-child .content ul li {
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .header__toggle__item:hover:last-child .content ul li a {
+    font-size: 1.4rem;
+  }
+  .header__toggle__item:hover .content__wrapper {
+    display: flex;
+    border-right: 3px solid #f4f4f4;
+  }
+  .header__toggle__item:hover .content__item {
+    padding: 2rem;
+    height: 100%;
+  }
+  .header__toggle__item:hover .content__item:not(:last-child) {
+    border-right: 2px solid #f4f4f4;
+  }
+  .header__toggle__item:hover .content__item:last-child {
+    display: block;
   }
 }
 .header__toggle__item.active {
