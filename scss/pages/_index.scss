@@ -6,6 +6,9 @@
   .tns-controls {
     display: none;
   }
+  .tns-nav {
+    display: none;
+  }
   button[data-action="stop"] {
     display: none;
   }
@@ -77,6 +80,84 @@
           background-image: url("../dist/img/banner3.jpg");
         }
       }
+    }
+  }
+}
+
+.tours {
+  background-color: $clr-gray;
+  @include mediaQueryMin($desktop) {
+    margin-top: -6rem;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+    @include mediaQueryMin($desktop) {
+      flex-direction: row;
+    }
+  }
+  &__item {
+    height: max-content;
+    width: 80%;
+    height: 41rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease-in-out;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    h4 {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: $clr-light;
+    }
+  }
+
+  & .container:last-child a {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    h5 {
+      font-size: 1.8rem;
+      font-weight: normal;
+    }
+    span {
+      display: block;
+      width: 2.3rem;
+      height: 0.2rem;
+      right: 0;
+      background-color: $clr-dark;
+      position: relative;
+      transition: 0.5s ease-in-out;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        right: -5px;
+        bottom: -0.2rem;
+        border-style: solid;
+        border-width: 3px 0px 3px 6px;
+        border-color: transparent transparent transparent $clr-dark;
+      }
+    }
+    &:hover span {
+      width: 4rem;
     }
   }
 }

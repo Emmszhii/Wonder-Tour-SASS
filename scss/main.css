@@ -939,6 +939,9 @@ h6 span {
 .banner .tns-controls {
   display: none;
 }
+.banner .tns-nav {
+  display: none;
+}
 .banner button[data-action=stop] {
   display: none;
 }
@@ -1006,4 +1009,85 @@ h6 span {
 }
 .banner__wrapper .banner__content:nth-child(4) .banner__content__img {
   background-image: url("../dist/img/banner3.jpg");
+}
+
+.tours {
+  background-color: #f4f4f4;
+}
+@media screen and (min-width: 96rem) {
+  .tours {
+    margin-top: -6rem;
+  }
+}
+.tours__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+@media screen and (min-width: 96rem) {
+  .tours__wrapper {
+    flex-direction: row;
+  }
+}
+.tours__item {
+  height: -moz-max-content;
+  height: max-content;
+  width: 80%;
+  height: 41rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.tours__item img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+.tours__item:hover img {
+  transform: scale(1.1);
+}
+.tours__item h4 {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.tours .container:last-child a {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.tours .container:last-child a h5 {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.tours .container:last-child a span {
+  display: block;
+  width: 2.3rem;
+  height: 0.2rem;
+  right: 0;
+  background-color: #000;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.tours .container:last-child a span::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  right: -5px;
+  bottom: -0.2rem;
+  border-style: solid;
+  border-width: 3px 0px 3px 6px;
+  border-color: transparent transparent transparent #000;
+}
+.tours .container:last-child a:hover span {
+  width: 4rem;
 }/*# sourceMappingURL=main.css.map */
