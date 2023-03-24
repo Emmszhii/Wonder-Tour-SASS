@@ -3,6 +3,7 @@
   position: fixed;
   width: 100%;
   box-shadow: 0px 2px 9px -7px rgba(0, 0, 0, 0.4);
+  z-index: 999;
   @include mediaQueryMin($desktop) {
     box-shadow: unset;
     .container {
@@ -462,8 +463,4 @@
       }
     }
   }
-}
-
-body {
-  background-color: red;
 }
